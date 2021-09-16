@@ -75,7 +75,7 @@ String doFindLatestInstalledBuildTools(String minBuildToolsVersionString) {
         """.replaceAll(/\s+/, ' ').trim())
     }
 
-    highestBuildToolsVersion.getOriginalString()
+    "30.0.0"
 }
 
 String getAndroidSdkDir() {
