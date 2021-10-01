@@ -242,7 +242,7 @@ android {
         if (cdvMaxSdkVersion != null) {
             maxSdkVersion cdvMaxSdkVersion
         }
-
+        cdvTargetSdkVersion = 31
         if(cdvTargetSdkVersion != null) {
             targetSdkVersion cdvTargetSdkVersion
         }
@@ -252,7 +252,7 @@ android {
       abortOnError false;
     }
 
-    compileSdkVersion cdvCompileSdkVersion
+    compileSdkVersion 31
     buildToolsVersion cdvBuildToolsVersion
 
     // This code exists for Crosswalk and other Native APIs.
