@@ -52,7 +52,7 @@ group = 'org.apache.cordova'
 version = '9.0.0'
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion cdvCompileSdkVersion
     buildToolsVersion cdvBuildToolsVersion
 
     compileOptions {
