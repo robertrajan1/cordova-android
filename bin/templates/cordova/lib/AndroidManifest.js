@@ -71,6 +71,7 @@ class AndroidManifest {
                 } else {
                     activity.attrib['android:name'] = name;
                 }
+                activity.attrib['android:exported'] = true;
                 return this;
             },
             getOrientation: function () {
