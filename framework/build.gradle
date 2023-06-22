@@ -129,11 +129,11 @@ bintray {
     key = System.getenv('BINTRAY_KEY')
     configurations = ['archives']
     pkg {
-        repo = 'maven'
-        name = 'cordova-android'
-        userOrg = 'cordova'
+        repo = 'generic'
+        name = 'gradle-project'
+        userOrg = 'bintray_user'
         licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/apache/cordova-android'
+        vcsUrl = 'https://github.com/bintray/gradle-bintray-plugin.git'
         websiteUrl = 'https://cordova.apache.org'
         issueTrackerUrl = 'https://github.com/apache/cordova-android/issues'
         publicDownloadNumbers = true
