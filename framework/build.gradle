@@ -37,6 +37,10 @@ buildscript {
     }
 }
 
+plugins {
+    id "com.jfrog.bintray" version "1.7.3"
+}
+
 allprojects {
     repositories {
         google()
@@ -46,7 +50,6 @@ allprojects {
 
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
 
 group = 'org.apache.cordova'
 version = '9.0.0'
@@ -129,11 +132,11 @@ bintray {
     key = System.getenv('BINTRAY_KEY')
     configurations = ['archives']
     pkg {
-        repo = 'generic'
-        name = 'gradle-project'
-        userOrg = 'bintray_user'
+        repo = 'maven'
+        name = 'cordova-android'
+        userOrg = 'cordova'
         licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/bintray/gradle-bintray-plugin.git'
+        vcsUrl = 'https://github.com/apache/cordova-android'
         websiteUrl = 'https://cordova.apache.org'
         issueTrackerUrl = 'https://github.com/apache/cordova-android/issues'
         publicDownloadNumbers = true
