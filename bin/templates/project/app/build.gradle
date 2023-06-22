@@ -45,9 +45,8 @@ buildscript {
     }
 
     repositories {
-        mavenCentral()
         google()
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
@@ -83,8 +82,8 @@ buildscript {
 // Allow plugins to declare Maven dependencies via build-extras.gradle.
 allprojects {
     repositories {
+        google()
         mavenCentral()
-        jcenter()
     }
 }
 
