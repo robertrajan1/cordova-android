@@ -25,7 +25,7 @@ ext {
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
@@ -33,14 +33,13 @@ buildscript {
         // studio comes out
         classpath 'com.android.tools.build:gradle:4.0.0'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.5'
     }
 }
 
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 }
 
@@ -123,25 +122,4 @@ artifacts {
     archives sourcesJar
 }
 
-bintray {
-    user = System.getenv('BINTRAY_USER')
-    key = System.getenv('BINTRAY_KEY')
-    configurations = ['archives']
-    pkg {
-        repo = 'maven'
-        name = 'cordova-android'
-        userOrg = 'cordova'
-        licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/apache/cordova-android'
-        websiteUrl = 'https://cordova.apache.org'
-        issueTrackerUrl = 'https://github.com/apache/cordova-android/issues'
-        publicDownloadNumbers = true
-        licenses = ['Apache-2.0']
-        labels = ['android', 'cordova', 'phonegap']
-        version {
-            name = '9.0.0'
-            released  = new Date()
-            vcsTag = '9.0.0'
-        }
-    }
-}
+
